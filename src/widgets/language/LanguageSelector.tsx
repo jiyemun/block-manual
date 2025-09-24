@@ -1,0 +1,17 @@
+import { useLanguageStore } from "@/shared/i18n/stores/languageStore.ts";
+import { Select } from "antd";
+
+export const LanguageSelector = () => {
+  const { language, setLanguage, availableLanguages } = useLanguageStore();
+
+  return (
+    <Select
+      value={language}
+      onChange={(value) => setLanguage(value)}
+      className={"w-[150px]"}
+      size="middle"
+      fieldNames={{ label: "name", value: "code" }}
+      options={availableLanguages}
+    ></Select>
+  );
+};
