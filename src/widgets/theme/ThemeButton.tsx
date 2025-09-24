@@ -2,7 +2,7 @@ import { Button } from "antd";
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
 import { ThemeKey, useThemeStore } from "@/shared/i18n/stores/useThemeStore.ts";
 
-export default function ThemeButton() {
+const ThemeButton = () => {
   const { theme, setTheme } = useThemeStore();
 
   const toggleTheme = () => {
@@ -20,4 +20,6 @@ export default function ThemeButton() {
       onClick={toggleTheme}
     />
   );
-}
+};
+
+export default ThemeButton;

@@ -1,7 +1,7 @@
 import { useLanguageStore } from "@/shared/i18n/stores/languageStore.ts";
 import { Select } from "antd";
 
-export const LanguageSelector = () => {
+const LanguageSelector = () => {
   const { language, setLanguage, availableLanguages } = useLanguageStore();
 
   return (
@@ -15,3 +15,5 @@ export const LanguageSelector = () => {
     ></Select>
   );
 };
+
+export default LanguageSelector;

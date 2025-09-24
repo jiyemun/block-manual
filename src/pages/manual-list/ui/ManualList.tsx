@@ -2,7 +2,6 @@ import { type ProColumns, ProTable } from "@ant-design/pro-components";
 import { Tag, Button } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
-import { LanguageSelector } from "@/widgets/language/LanguageSelector.tsx";
 import { useNavigate } from "react-router-dom";
 import {
   dataSource,
@@ -10,6 +9,7 @@ import {
   statusColorMap,
 } from "@/pages/manual-list/model/manualModel.ts";
 import ThemeButton from "@/widgets/theme/ThemeButton.tsx";
+import LanguageSelector from "@/widgets/language/LanguageSelector.tsx";
 
 const ManualList = () => {
   const { t } = useTranslation();

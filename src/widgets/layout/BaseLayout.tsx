@@ -8,4 +8,5 @@ const BaseLayout = () => {
     </Layout>
   );
 };
+
 export default BaseLayout;
