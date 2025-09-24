@@ -1,5 +1,4 @@
 import { ConfigProvider, theme } from "antd";
-// import { ProConfigProvider } from "@ant-design/pro-components";
 import koKR from "antd/locale/ko_KR";
 import React from "react";
 import { ThemeKey, useThemeStore } from "@/shared/i18n/stores/useThemeStore.ts";
@@ -23,21 +22,7 @@ export const Providers: React.FC<ProvidersProps> = ({ children }) => {
         algorithm: themeAlgorithm,
       }}
     >
-      {/*<ProConfigProvider*/}
-      {/*  hashed={false}*/}
-      {/*  token={{*/}
-      {/*    header: {*/}
-      {/*      colorBgHeader: "#001529",*/}
-      {/*      colorHeaderTitle: "#fff",*/}
-      {/*      colorTextMenu: "#dfdfdf",*/}
-      {/*      colorTextMenuSecondary: "#dfdfdf",*/}
-      {/*      colorTextMenuSelected: "#fff",*/}
-      {/*      colorBgMenuItemSelected: "#1890ff",*/}
-      {/*    },*/}
-      {/*  }}*/}
-      {/*>*/}
       {children}
-      {/*</ProConfigProvider>*/}
     </ConfigProvider>
   );
 };
