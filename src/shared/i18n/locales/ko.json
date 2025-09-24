@@ -1,0 +1,31 @@
+{
+  "manual": {
+    "title": "제목",
+    "description": "5개 언어를 지원하는 매뉴얼 관리 시스템",
+    "list": "매뉴얼 목록",
+    "addNew": "새 매뉴얼 추가",
+    "edit": "편집",
+    "category": "카테고리",
+    "status": "상태",
+    "pages": "페이지 수",
+    "lastModified": "최종 수정일",
+    "actions": "작업"
+  },
+  "categories": {
+    "basic": "기본",
+    "advanced": "고급",
+    "development": "개발",
+    "operation": "운영"
+  },
+  "status": {
+    "complete": "완료",
+    "inProgress": "진행중",
+    "published": "출간중"
+  },
+  "buttons": {
+    "save": "저장",
+    "cancel": "취소",
+    "delete": "삭제",
+    "confirm": "확인"
+  }
+}

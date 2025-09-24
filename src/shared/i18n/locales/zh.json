@@ -1,0 +1,31 @@
+{
+  "manual": {
+    "title": "多语言手册编辑器",
+    "description": "支持5种语言的手册管理系统",
+    "list": "手册列表",
+    "addNew": "添加新手册",
+    "edit": "编辑",
+    "category": "类别",
+    "status": "状态",
+    "pages": "页数",
+    "lastModified": "最后修改",
+    "actions": "操作"
+  },
+  "categories": {
+    "basic": "基础",
+    "advanced": "高级",
+    "development": "开发",
+    "operation": "运营"
+  },
+  "status": {
+    "complete": "完成",
+    "inProgress": "进行中",
+    "published": "已发布"
+  },
+  "buttons": {
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "confirm": "确认"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "manual": {
+    "title": "Title",
+    "description": "Manual management system supporting 5 languages",
+    "list": "Manual List",
+    "addNew": "Add New Manual",
+    "edit": "Edit",
+    "category": "Category",
+    "status": "Status",
+    "pages": "Pages",
+    "lastModified": "Last Modified",
+    "actions": "Actions"
+  },
+  "categories": {
+    "basic": "Basic",
+    "advanced": "Advanced",
+    "development": "Development",
+    "operation": "Operation"
+  },
+  "status": {
+    "complete": "Complete",
+    "inProgress": "In Progress",
+    "published": "Published"
+  },
+  "buttons": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "confirm": "Confirm"
+  }
+}
