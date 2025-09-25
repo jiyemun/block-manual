@@ -3,15 +3,13 @@ import { Tag, Button } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import {
-  dataSource,
-  type Manual,
-  statusColorMap,
-} from "@/pages/manual-list/model/manualModel.ts";
 import ThemeButton from "@/widgets/theme/ThemeButton.tsx";
 import LanguageSelector from "@/widgets/language/LanguageSelector.tsx";
+import { type Manual } from "@/entities/dashbord/dashboard.type.ts";
+import { statusColorMap } from "@/entities/dashbord/dashboard.enum.ts";
+import { dataSource } from "@/entities/dashbord/testData.ts";
 
-const ManualList = () => {
+const ManualDashboard = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -100,4 +98,4 @@ const ManualList = () => {
   );
 };
 
-export default ManualList;
+export default ManualDashboard;

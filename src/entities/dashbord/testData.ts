@@ -1,22 +1,6 @@
-// 데이터 인터페이스 정의
-export interface Manual {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  status: "발행됨" | "초안" | "보관됨";
-  pageCount: number;
-  lastModified: string;
-}
-
-// 상태에 따라 색상을 매핑하는 객체
-export const statusColorMap = {
-  발행됨: "green",
-  초안: "gold",
-  보관됨: "default",
-} as const;
-
 // 예시 데이터
+import type { Manual } from "@/entities/dashbord/dashboard.type.ts";
+
 export const dataSource: Manual[] = [
   {
     id: "1",

@@ -1,69 +1,37 @@
-# React + TypeScript + Vite
+# AG-BlockManual
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+메뉴얼 에디터
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## FSD 아키텍처
 
-## Expanding the ESLint configuration
+- https://feature-sliced.design/kr/docs/get-started/overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+![Image](./fsd.jpg)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Layer
+Layer는 모든 FSD 프로젝트의 표준 최상위 폴더입니다.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- App* : Routing, Entrypoint, Global Styles, Provider 등 앱을 실행하는 모든 요소
+- Processes(더 이상 사용되지 않음) : 페이지 간 복합 시나리오
+- Pages : 전체 page 또는 중첩 Routing의 핵심 영역
+- Widgets : 독립적으로 동작하는 대형 UI·기능 블록
+- Features : 제품 전반에서 재사용되는 비즈니스 기능
+- Entities : user, product 같은 핵심 도메인 Entity
+- Shared* : 프로젝트 전반에서 재사용되는 일반 유틸리티
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+> App·Shared Layer는 Slice 없이 곧바로 Segment로 구성됩니다. 상위 Layer의 모듈은 자신보다 하위 Layer만 참조할 수 있습니다.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Slice
+Slice는 Layer 내부를 비즈니스 도메인별로 나눕니다. 이름·개수에 제한이 없으며, 같은 Layer 내 다른 Slice를 참조할 수 없습니다. 이 규칙이 높은 응집도와 낮은 결합도를 보장합니다.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Segment
+Slice와 App·Shared Layer는 Segment로 세분화되어, 기술적 목적에 따라 코드를 그룹화합니다. 일반적으로 다음과 같은 Segment를 사용합니다
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ui : UI components, date formatter, styles 등 UI 표현과 직접 관련된 코드
+- api : request functions, data types, mappers 등 백엔드 통신 및 데이터 로직
+- model : schema, interfaces, store, business logic 등 애플리케이션 도메인 모델
+- lib : 해당 Slice에서 여러 모듈이 함께 사용하는 공통 library code
+- config : configuration files, feature flags 등 환경·기능 설정
+
+> 대부분의 Layer에서는 위 다섯 Segment로 충분합니다. 필요하다면 App 또는 Shared Layer에서만 추가 Segment를 정의하세요. (필수 규칙은 아닙니다.)
