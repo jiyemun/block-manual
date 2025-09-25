@@ -1,5 +1,11 @@
+export const MANUAL_STATUS = {
+  PUBLISHED: "발행됨",
+  DRAFT: "초안",
+  ARCHIVED: "보관됨",
+} as const;
+
 export const statusColorMap = {
-  발행됨: "green",
-  초안: "gold",
-  보관됨: "default",
+  [MANUAL_STATUS.PUBLISHED]: "green",
+  [MANUAL_STATUS.DRAFT]: "gold",
+  [MANUAL_STATUS.ARCHIVED]: "default",
 } as const;
