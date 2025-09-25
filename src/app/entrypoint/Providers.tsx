@@ -1,7 +1,7 @@
 import { ConfigProvider, theme } from "antd";
 import koKR from "antd/locale/ko_KR";
 import React from "react";
-import { ThemeKey, useThemeStore } from "@/shared/i18n/stores/useThemeStore.ts";
+import { ThemeKey, useThemeStore } from "@/app/store/useThemeStore.ts";
 
 interface ProvidersProps {
   children: React.ReactNode;

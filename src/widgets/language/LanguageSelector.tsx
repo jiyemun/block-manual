@@ -1,4 +1,4 @@
-import { useLanguageStore } from "@/shared/i18n/stores/languageStore.ts";
+import { useLanguageStore } from "@/app/store/useLanguageStore.ts";
 import { Select } from "antd";
 
 const LanguageSelector = () => {

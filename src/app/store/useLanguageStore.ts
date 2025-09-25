@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import i18n from "@/shared/i18n/config";
+import i18n from "@/shared/i18n/config.ts";
 
 interface Language {
   code: string;
@@ -7,14 +7,17 @@ interface Language {
   flag: string;
 }
 
-interface LanguageState {
+interface State {
   language: string;
   availableLanguages: Language[];
+}
+
+interface Action {
   setLanguage: (lang: string) => void;
   getCurrentLanguage: () => Language;
 }
 
-export const useLanguageStore = create<LanguageState>((set, get) => ({
+export const useLanguageStore = create<State & Action>((set, get) => ({
   language: i18n.language || "ko", // i18n에서 감지된 언어 사용
 
   availableLanguages: [
