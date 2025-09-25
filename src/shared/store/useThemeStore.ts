@@ -1,11 +1,6 @@
 import { create } from "zustand";
+import { ThemeKey, type ThemeType } from "@/shared/types/theme.type.ts";
 
-export const ThemeKey = {
-  LIGHT_THEME: "light",
-  DARK_THEME: "dark",
-} as const;
-
-export type ThemeType = (typeof ThemeKey)[keyof typeof ThemeKey];
 interface State {
   theme: ThemeType;
 }

@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import { MoonOutlined, SunOutlined } from "@ant-design/icons";
-import { ThemeKey, useThemeStore } from "@/app/store/useThemeStore.ts";
+import { useThemeStore } from "@/shared/store/useThemeStore.ts";
+import { ThemeKey } from "@/shared/types/theme.type.ts";
 
 const ThemeButton = () => {
   const { theme, setTheme } = useThemeStore();

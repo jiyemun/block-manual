@@ -6,7 +6,10 @@ import { useNavigate } from "react-router-dom";
 import ThemeButton from "@/widgets/theme/ThemeButton.tsx";
 import LanguageSelector from "@/widgets/language/LanguageSelector.tsx";
 import { type Manual } from "@/entities/dashbord/dashboard.type.ts";
-import { statusColorMap } from "@/entities/dashbord/dashboard.enum.ts";
+import {
+  categoryColorMap,
+  statusColorMap,
+} from "@/entities/dashbord/dashboard.enum.ts";
 import { dataSource } from "@/entities/dashbord/testData.ts";
 
 const ManualDashboard = () => {
@@ -34,7 +37,13 @@ const ManualDashboard = () => {
       dataIndex: "category",
       align: "center",
       width: "15%",
-      render: (_, record) => <Tag color="blue">{record.category}</Tag>,
+      render: (_, record) => (
+        <Tag
+          color={categoryColorMap[record.category] ?? categoryColorMap.default}
+        >
+          {record.category}
+        </Tag>
+      ),
     },
     {
       title: t("manual.status"),
@@ -42,7 +51,9 @@ const ManualDashboard = () => {
       align: "center",
       width: "15%",
       render: (_, record) => (
-        <Tag color={statusColorMap[record.status]}>{record.status}</Tag>
+        <Tag color={statusColorMap[record.status] ?? statusColorMap.default}>
+          {record.status}
+        </Tag>
       ),
     },
     {
