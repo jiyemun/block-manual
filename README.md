@@ -2,7 +2,6 @@
 
 메뉴얼 에디터
 
-
 ## FSD 아키텍처
 
 - https://feature-sliced.design/kr/docs/get-started/overview
