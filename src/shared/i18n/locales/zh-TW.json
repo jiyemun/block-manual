@@ -1,0 +1,30 @@
+{
+  "manual": {
+    "title": "標題",
+    "list": "手冊列表",
+    "addNew": "新增手冊",
+    "edit": "編輯",
+    "category": "類別",
+    "status": "狀態",
+    "pages": "頁數",
+    "lastModified": "最後修改日期",
+    "actions": "操作"
+  },
+  "categories": {
+    "basic": "基本",
+    "advanced": "進階",
+    "development": "開發",
+    "operation": "營運"
+  },
+  "status": {
+    "complete": "完成",
+    "inProgress": "進行中",
+    "published": "已發布"
+  },
+  "buttons": {
+    "save": "儲存",
+    "cancel": "取消",
+    "delete": "刪除",
+    "confirm": "確認"
+  }
+}

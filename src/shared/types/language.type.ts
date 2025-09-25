@@ -1,8 +1,9 @@
 export const LANGUAGE_CODE = {
   KO: "ko",
   EN: "en",
-  ZH: "zh",
+  CN: "zh-CN",
   JA: "ja",
+  TWN: "zh-TW",
 } as const;
 
 export type LanguageCode = (typeof LANGUAGE_CODE)[keyof typeof LANGUAGE_CODE];
@@ -14,8 +15,9 @@ export interface Language {
 }
 
 export const AVAILABLE_LANGUAGES: Language[] = [
-  { code: LANGUAGE_CODE.KO, name: "한국어", flag: "🇰🇷" },
-  { code: LANGUAGE_CODE.EN, name: "English", flag: "🇺🇸" },
-  { code: LANGUAGE_CODE.ZH, name: "中文", flag: "🇨🇳" },
-  { code: LANGUAGE_CODE.JA, name: "日本語", flag: "🇯🇵" },
+  { code: LANGUAGE_CODE.KO, name: "KOR", flag: "🇰🇷" },
+  { code: LANGUAGE_CODE.EN, name: "ENG", flag: "🇺🇸" },
+  { code: LANGUAGE_CODE.CN, name: "CHN", flag: "🇨🇳" },
+  { code: LANGUAGE_CODE.JA, name: "JPN", flag: "🇯🇵" },
+  { code: LANGUAGE_CODE.TWN, name: "TWN", flag: "🇹🇼" },
 ] as const;

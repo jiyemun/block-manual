@@ -1,7 +1,6 @@
 {
   "manual": {
     "title": "제목",
-    "description": "5개 언어를 지원하는 매뉴얼 관리 시스템",
     "list": "매뉴얼 목록",
     "addNew": "새 매뉴얼 추가",
     "edit": "편집",

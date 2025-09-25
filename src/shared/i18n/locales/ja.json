@@ -1,0 +1,30 @@
+{
+  "manual": {
+    "title": "タイトル",
+    "list": "マニュアル一覧",
+    "addNew": "新しいマニュアルを追加",
+    "edit": "編集",
+    "category": "カテゴリ",
+    "status": "ステータス",
+    "pages": "ページ数",
+    "lastModified": "最終更新日",
+    "actions": "操作"
+  },
+  "categories": {
+    "basic": "基本",
+    "advanced": "上級",
+    "development": "開発",
+    "operation": "運用"
+  },
+  "status": {
+    "complete": "完了",
+    "inProgress": "進行中",
+    "published": "公開中"
+  },
+  "buttons": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "confirm": "確認"
+  }
+}

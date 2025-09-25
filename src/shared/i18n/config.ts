@@ -5,24 +5,33 @@ import LanguageDetector from "i18next-browser-languagedetector";
 // 번역 파일들 import
 import ko from "./locales/ko.json";
 import en from "./locales/en.json";
-import zh from "./locales/zh.json";
+import zhCN from "./locales/zh-CN.json";
+import ja from "./locales/ja.json";
+import zhTW from "./locales/zh-TW.json";
+import { LANGUAGE_CODE } from "@/shared/types/language.type.ts";
 
 i18n
   .use(LanguageDetector) // 자동 언어 감지
   .use(initReactI18next) // React와 연결
   .init({
     resources: {
-      ko: {
+      [LANGUAGE_CODE.KO]: {
         translation: ko,
       },
-      en: {
+      [LANGUAGE_CODE.EN]: {
         translation: en,
       },
-      zh: {
-        translation: zh,
+      [LANGUAGE_CODE.CN]: {
+        translation: zhCN,
+      },
+      [LANGUAGE_CODE.JA]: {
+        translation: ja,
+      },
+      [LANGUAGE_CODE.TWN]: {
+        translation: zhTW,
       },
     },
-    fallbackLng: "ko", // 기본 언어
+    fallbackLng: LANGUAGE_CODE.KO, // 기본 언어
     debug: import.meta.env.DEV, // 개발 모드에서만 디버그
 
     // 자동 언어 감지 설정
