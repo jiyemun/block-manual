@@ -1,18 +1,25 @@
 import {
-  CATEGORY,
-  type MANUAL_STATUS,
+  DOCUMENT_STATUS,
+  PUBLISH_STATUS,
+  SAVE_STATUS,
 } from "@/entities/dashbord/dashboard.enum.ts";
 
-export type ManualStatus = (typeof MANUAL_STATUS)[keyof typeof MANUAL_STATUS];
+export type SaveStatus = (typeof SAVE_STATUS)[keyof typeof SAVE_STATUS];
 
-export type CategoryType = (typeof CATEGORY)[keyof typeof CATEGORY];
+export type DocumentStatus =
+  (typeof DOCUMENT_STATUS)[keyof typeof DOCUMENT_STATUS];
+
+export type PublishStatus =
+  (typeof PUBLISH_STATUS)[keyof typeof PUBLISH_STATUS];
 
 export interface Manual {
   id: string;
   name: string;
   description: string;
-  category: CategoryType;
-  status: ManualStatus;
+  category: string;
+  saveStatus: SaveStatus;
+  publishStatus: PublishStatus;
+  documentStatus: DocumentStatus;
   pageCount: number;
   lastModified: string;
 }

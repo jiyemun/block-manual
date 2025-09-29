@@ -1,32 +1,43 @@
-export const MANUAL_STATUS = {
-  PUBLISHED: "발행됨",
-  DRAFT: "초안",
-  ARCHIVED: "보관됨",
+export const SAVE_STATUS = {
+  DRAFT: "검토중",
+  SAVED: "작성 완료",
+  DRAFT_WORKING: "작성중",
 } as const;
 
-// 상태별 컬러 매핑
-export const statusColorMap = {
-  [MANUAL_STATUS.PUBLISHED]: "green",
-  [MANUAL_STATUS.DRAFT]: "gold",
-  [MANUAL_STATUS.ARCHIVED]: "blue",
+// 발행 상태
+export const PUBLISH_STATUS = {
+  PUBLISHED: "발행됨",
+  DRAFT: "숨김",
+  UNPUBLISHED: "미발행",
+} as const;
+
+// 문서 상태
+export const DOCUMENT_STATUS = {
+  IN_REVIEW: "보관중",
+  DRAFT: "수정중",
+  USER_VIEW: "사용자 공개",
+} as const;
+
+// 저장 상태별 컬러 매핑
+export const saveStatusColorMap = {
+  [SAVE_STATUS.DRAFT]: "magenta",
+  [SAVE_STATUS.SAVED]: "cyan",
+  [SAVE_STATUS.DRAFT_WORKING]: "cyan",
   default: "blue",
 } as const;
 
-// 수정 예정
-export const CATEGORY = {
-  USER_MANAGEMENT: "사용법",
-  MANAGEMENT: "관리",
-  DEVELOPMENT: "개발",
-  SETUP: "설치",
-  SUPPORT: "지원",
+// 발행 상태별 컬러 매핑
+export const publishStatusColorMap = {
+  [PUBLISH_STATUS.PUBLISHED]: "green",
+  [PUBLISH_STATUS.DRAFT]: "blue",
+  [PUBLISH_STATUS.UNPUBLISHED]: "red",
+  default: "blue",
 } as const;
 
-// 카테고리별 컬러 매핑
-export const categoryColorMap = {
-  [CATEGORY.USER_MANAGEMENT]: "blue",
-  [CATEGORY.MANAGEMENT]: "blue",
-  [CATEGORY.DEVELOPMENT]: "blue",
-  [CATEGORY.SETUP]: "blue",
-  [CATEGORY.SUPPORT]: "blue",
+// 문서 상태별 컬러 매핑
+export const documentStatusColorMap = {
+  [DOCUMENT_STATUS.IN_REVIEW]: "default",
+  [DOCUMENT_STATUS.DRAFT]: "gold",
+  [DOCUMENT_STATUS.USER_VIEW]: "purple",
   default: "blue",
 } as const;

@@ -2,10 +2,12 @@
   "manual": {
     "title": "제목",
     "list": "매뉴얼 목록",
-    "addNew": "새 매뉴얼 추가",
+    "addNew": "매뉴얼 추가",
     "edit": "편집",
     "category": "카테고리",
     "status": "상태",
+    "saveStatus": "저장 여부",
+    "publishStatus": "발행 여부",
     "pages": "페이지 수",
     "lastModified": "최종 수정일",
     "actions": "작업"
