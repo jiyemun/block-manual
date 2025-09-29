@@ -1,21 +1,21 @@
 export const SAVE_STATUS = {
-  DRAFT: "검토중",
-  SAVED: "작성 완료",
-  DRAFT_WORKING: "작성중",
+  DRAFT: 0, // "검토중",
+  SAVED: 1, // "작성 완료",
+  DRAFT_WORKING: 2, // "작성중",
 } as const;
 
 // 발행 상태
 export const PUBLISH_STATUS = {
-  PUBLISHED: "발행됨",
-  DRAFT: "숨김",
-  UNPUBLISHED: "미발행",
+  PUBLISHED: 0, // "발행됨",
+  DRAFT: 1, // "숨김",
+  UNPUBLISHED: 2, // "미발행",
 } as const;
 
 // 문서 상태
 export const DOCUMENT_STATUS = {
-  IN_REVIEW: "보관중",
-  DRAFT: "수정중",
-  USER_VIEW: "사용자 공개",
+  IN_REVIEW: 0, // "보관중",
+  DRAFT: 1, // "수정중",
+  USER_VIEW: 2, // "사용자 공개",
 } as const;
 
 // 저장 상태별 컬러 매핑

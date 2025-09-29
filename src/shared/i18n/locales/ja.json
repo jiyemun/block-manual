@@ -26,5 +26,20 @@
     "cancel": "キャンセル",
     "delete": "削除",
     "confirm": "確認"
+  },
+  "publish": {
+    "published": "公開済み",
+    "draft": "非公開",
+    "unpublished": "未公開"
+  },
+  "document": {
+    "inReview": "保管中",
+    "draft": "修正中",
+    "userView": "ユーザー公開"
+  },
+  "save": {
+    "draft": "確認中",
+    "saved": "作成完了",
+    "draftWorking": "作成中"
   }
 }

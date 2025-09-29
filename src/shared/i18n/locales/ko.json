@@ -28,5 +28,20 @@
     "cancel": "취소",
     "delete": "삭제",
     "confirm": "확인"
+  },
+  "publish": {
+    "published": "발행됨",
+    "draft": "숨김",
+    "unpublished": "미발행"
+  },
+  "document": {
+    "inReview": "보관중",
+    "draft": "수정중",
+    "userView": "사용자 공개"
+  },
+  "save": {
+    "draft": "검토중",
+    "saved": "작성 완료",
+    "draftWorking": "작성중"
   }
 }

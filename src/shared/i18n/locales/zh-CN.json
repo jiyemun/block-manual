@@ -26,5 +26,20 @@
     "cancel": "取消",
     "delete": "删除",
     "confirm": "确认"
+  },
+  "publish": {
+    "published": "已发布",
+    "draft": "隐藏",
+    "unpublished": "未发布"
+  },
+  "document": {
+    "inReview": "保存中",
+    "draft": "修改中",
+    "userView": "用户公开"
+  },
+  "save": {
+    "draft": "审查中",
+    "saved": "完成撰写",
+    "draftWorking": "撰写中"
   }
 }

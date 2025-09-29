@@ -26,5 +26,20 @@
     "cancel": "取消",
     "delete": "刪除",
     "confirm": "確認"
+  },
+  "publish": {
+    "published": "已發布",
+    "draft": "隱藏",
+    "unpublished": "未發布"
+  },
+  "document": {
+    "inReview": "保留中",
+    "draft": "修改中",
+    "userView": "用戶公開"
+  },
+  "save": {
+    "draft": "審核中",
+    "saved": "完成撰寫",
+    "draftWorking": "撰寫中"
   }
 }

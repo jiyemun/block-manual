@@ -23,3 +23,9 @@ export interface Manual {
   pageCount: number;
   lastModified: string;
 }
+
+export interface ManualFormValues {
+  title?: string;
+  category?: string;
+  publishStatus?: PublishStatus[];
+}

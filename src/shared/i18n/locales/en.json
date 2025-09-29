@@ -26,5 +26,20 @@
     "cancel": "Cancel",
     "delete": "Delete",
     "confirm": "Confirm"
+  },
+  "publish": {
+    "published": "Published",
+    "draft": "Hidden",
+    "unpublished": "Unpublished"
+  },
+  "document": {
+    "inReview": "In Review",
+    "draft": "Editing",
+    "userView": "Public View"
+  },
+  "save": {
+    "draft": "Reviewing",
+    "saved": "Completed",
+    "draftWorking": "Working"
   }
 }
