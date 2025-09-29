@@ -61,7 +61,12 @@ const ManualDashboard = () => {
         <LanguageSelector />
       </div>
       <ProPageHeader prefixedClassName={t("manual.list")} />
-      <ProCard title={t("manual.list")}>
+      <ProCard
+        title={t("manual.list")}
+        bodyStyle={{
+          padding: 0,
+        }}
+      >
         <ProTable<Manual>
           columns={columns}
           dataSource={filteredData}
